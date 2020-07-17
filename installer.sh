@@ -25,7 +25,6 @@ else
     echo "|- Directory created"
   fi
   clear
-  echo "|- "
   tar -xvzf $DOWNLOADED_FILE -C $DIRECTORY
   echo "|- Downloading .desktop file"
   wget https://raw.githubusercontent.com/hfabio/tibia-installer/master/Tibia.desktop -O ./Tibia.desktop &&
@@ -46,9 +45,11 @@ else
     echo "|- Minimap directory created"
   fi
   clear
-  unzip /tmp/minimap-with-markers.zip -d $MINIMAP_DIRECTORY
   echo "|- Opening your tibia for update"
   ~/Games/Tibia/start-tibia-launcher.sh
+  clear
+  echo "|- Installing minimap"
+  unzip /tmp/minimap-with-markers.zip -d "/home/$USER/.local/share/CipSoft GmbH/Tibia/packages/Tibia/"
   clear
   echo "|- All done!"
 fi
