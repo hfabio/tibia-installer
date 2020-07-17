@@ -8,7 +8,7 @@ clear
 if [[ $EUID -eq 0 ]]; then
   notify-send "Please, use this script as user, not as root!"
 else
-  notify-send "Hello $USER, vamos instalar o tibia!"
+  notify-send "Hello $USER, lets install tibia!"
   echo "|- First of all lets check if you have unzip installed"
   sudo apt-get install unzip &&
   clear
