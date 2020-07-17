@@ -37,7 +37,7 @@ else
   clear
   echo "|- Opening tibia to install open map"
   echo "|- Downloading minimap files"
-  wget https://tibiamaps.io/downloads/minimap-with-markers /tmp/minimap-with-markers.zip
+  wget https://tibiamaps.io/downloads/minimap-with-markers -O /tmp/minimap-with-markers.zip
   if [ -d ${MINIMAP_DIRECTORY} ];then
     echo "|- the directory $MINIMAP_DIRECTORY already exists"
   else
@@ -46,9 +46,9 @@ else
     echo "|- Minimap directory created"
   fi
   clear
-  echo "|- Opening your tibia for update, please close after update to install minimap!"
-  ~/Games/Tibia/start-tibia-launcher.sh
   unzip /tmp/minimap-with-markers.zip -d $MINIMAP_DIRECTORY
+  echo "|- Opening your tibia for update"
+  ~/Games/Tibia/start-tibia-launcher.sh
   clear
   echo "|- All done!"
 fi
