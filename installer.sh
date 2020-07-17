@@ -2,7 +2,7 @@
 DIRECTORY="/home/$USER/Games/"
 MINIMAP_DIRECTORY="/home/$USER/.local/share/CipSoft GmbH/Tibia/packages/Tibia/"
 DOWNLOADED_FILE=/tmp/tibia.tar.gz
-
+clear
 
 
 if [[ $EUID -eq 0 ]]; then
@@ -11,11 +11,12 @@ else
   notify-send "Hello $USER, vamos instalar o tibia!"
   echo "|- First of all lets check if you have unzip installed"
   sudo apt-get install unzip &&
+  clear
   echo "|- Lets download the client"
   wget https://static.tibia.com/download/tibia.x64.tar.gz -O $DOWNLOADED_FILE &&
   echo "|- Download finished"
+  clear
   echo "|- Creating folder for tibia if not exists in $DIRECTORY"
-
   if [ -d ${DIRECTORY} ];then
   echo "|- the directory $DIRECTORY already exists"
   else
@@ -23,6 +24,8 @@ else
     mkdir $DIRECTORY
     echo "|- Directory created"
   fi
+  clear
+  echo "|- "
   tar -xvzf $DOWNLOADED_FILE -C $DIRECTORY
   echo "|- Downloading .desktop file"
   wget https://raw.githubusercontent.com/hfabio/tibia-installer/master/Tibia.desktop -O ./Tibia.desktop &&
@@ -39,9 +42,13 @@ else
     echo "|- the directory $MINIMAP_DIRECTORY already exists"
   else
     echo "|- Creating $MINIMAP_DIRECTORY"
-    mkdir $MINIMAP_DIRECTORY
+    mkdir -p $MINIMAP_DIRECTORY
     echo "|- Minimap directory created"
   fi
-  unzip /tmp/minimap-with-markers.zip -d $MINIMAP_DIRECTORY
+  clear
+  echo "|- Opening your tibia for update, please close after update to install minimap!"
   ~/Games/Tibia/start-tibia-launcher.sh
+  unzip /tmp/minimap-with-markers.zip -d $MINIMAP_DIRECTORY
+  clear
+  echo "|- All done!"
 fi
