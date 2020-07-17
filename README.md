@@ -2,7 +2,7 @@
 Tibia installer for ubuntu 20.04 LTS. You can use for another distros, but take care with compatibility (like the gamemode or libpcre). See how to deal with it [here](#for-non-Ubuntu-20.04-users)
 
 ## What it does
-This script downloads the tibia for linux, install in your system at `~/Games/Tibia` creating a launch `.desktop` file.
+This script downloads the tibia for linux, install in your system at `~/Games/Tibia` creating a launch `.desktop` file, then install maps for you either.
 
 ## What I need to run
 - Ubuntu 20.04
