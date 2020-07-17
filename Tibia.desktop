@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Tibia
+Comment=Joguim que a gente nunca deixa
+Exec=gamemoderun /home/user_name/Games/Tibia/start-tibia-launcher.sh
+Path=/home/user_name/Games/Tibia
+Icon=/home/user_name/Games/Tibia/Tibia_icon.png
+Terminal=false
+Type=Application
+Categories=Games;Development
