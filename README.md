@@ -16,14 +16,6 @@ First download the installer.sh
 ```bash
   wget -qO- https://raw.githubusercontent.com/hfabio/tibia-installer/master/installer.sh | bash
 ```
-Then give the permission
-```bash
-  sudo chmod +x installer.sh
-```
-And just run as user
-```bash
-  ./installer.sh
-```
 >**note: you can be asked to insert your OS password if you don't use `sudo` in this terminal session**
 
 ## For non-Ubuntu 20.04 users
