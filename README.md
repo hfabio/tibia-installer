@@ -14,7 +14,7 @@ This script downloads the tibia for linux, install in your system at `~/Games/Ti
 
 First download the installer.sh
 ```bash
-  wget https://raw.githubusercontent.com/hfabio/tibia-installer/master/installer.sh
+  wget -qO- https://raw.githubusercontent.com/hfabio/tibia-installer/master/installer.sh | bash
 ```
 Then give the permission
 ```bash
